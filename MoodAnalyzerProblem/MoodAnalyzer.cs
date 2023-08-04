@@ -9,9 +9,17 @@
         }
         public string AnalyseMood(string message)
         {
-            if (message.Contains("Sad"))
-                return "SAD";
-            return "HAPPY";
+            try
+            {
+                if (message.Contains("Sad"))
+                    return "SAD";
+                return "HAPPY";
+            }
+            catch(Exception e)
+            {
+                return "HAPPY";
+            }
+            
         }
     }
 }
